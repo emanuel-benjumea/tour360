@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Imagen 360 con punto de referencia</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Imagen 360 fotoesférica principal -->
+      <a-sky src="img/6.jpg"></a-sky>
+
+      <!-- Punto de referencia que nos llevará a otra imagen 360 fotoesférica -->
+      <a-entity
+        position="3 2 -5"
+        geometry="primitive: sphere; radius: 0.3"
+        material="color: red"
+        onclick="location.href='index.html'"
+        
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>
