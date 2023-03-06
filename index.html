@@ -2,17 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Mi recorrido en 360°</title>
+    <title>Imagen 360 con punto de referencia</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-sky src="img/7.jpg"></a-sky>
-      <a-entity position="0 1 -2">
-        <a-text value="Ir a A-Frame.io" align="center" color="white"></a-text>
-        <a-link href="https://aframe.io/" title="A-Frame.io" target="_blank"></a-link>
-      </a-entity>
+      <!-- Imagen 360 fotoesférica principal -->
+      <a-sky src="/img/7.jpg"></a-sky>
+
+      <!-- Punto de referencia que nos llevará a otra imagen 360 fotoesférica -->
+      <a-entity
+        position="3 2 -5"
+        geometry="primitive: sphere; radius: 0.3"
+        material="color: red"
+        onclick="location.href='index.html'"
+        preset='hiro' cursor="rayOrigin: mouse"
+      ></a-entity>
     </a-scene>
-    
   </body>
 </html>
